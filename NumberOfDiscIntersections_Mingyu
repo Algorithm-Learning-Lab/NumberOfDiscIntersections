@@ -1,0 +1,10 @@
+def NumberOfDiscIntersections (A) :
+  count = 0
+  n = len(A)
+  for k in range (n) :
+    for j in range (k+1, n) :
+      if (j-k) < (A[k] + A[j]) :
+        count = count + 1
+  return count
+
+print(NumberOfDiscIntersections([1,5,2,1,4,0]))
